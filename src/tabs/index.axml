@@ -1,0 +1,40 @@
+<view class="am-tabs {{className}}" hidden="{{hidden}}" id="an-tabs-id">
+  <view class="am-tabs-tab-bar-wrap">
+    <view class="am-tabs-bar">
+      <view class="am-tabs-bar-content-wrap">
+        <view class="am-tabs-scroll-left"></view>
+        <view class="am-tabs-scroll-right"></view>
+        <scroll-view
+          scroll-left="{{scrollLeft}}"
+          scroll-x="{{true}}"
+          scroll-with-animation="{{animation}}"
+          class="am-tabs-bar-content"
+          style="{{ paddingLeft : paddingLeft}}">
+          <block a:for="{{tabs}}">
+            <view
+              data-index="{{index}}"
+              key="tabs-item-{{index}}"
+              onTap="handleTabClick"
+              style="{{
+                backgroundColor: backgroundColor,
+                color: index === activeTab ? hilightTextColor: textColor,
+                width: fixedTabWidth ? fixedTabWidth : tabWidth * 100 + '%',
+              }}"
+              class="am-tabs-bar-tab">
+              <view class="am-tabs-bar-title" style="{{ fontSize: index === activeTab ? hilightTextFontSize : textFontSize }}">
+                {{item.title}}
+                <view a:if="{{item.badgeType}}" class="am-tabs-bar-badge {{item.badgeType}}">
+                  {{item.badgeType === 'text' && item.badgeText ? item.badgeText.substr(0, 1) : ''}}
+                </view>
+              </view>
+              <view class="am-tabs-bar-title-bottomline" style="{{ background : bottomlineColor, width: bottomlineWidth }}" hidden="{{ index != activeTab }}" />
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="am-tabs-plus-wrap {{showPlus ? 'show' : ''}}">
+        <view class="am-tabs-plus" onTap="handlePlusClick"></view>
+      </view>
+    </view>
+  </view>
+</view>

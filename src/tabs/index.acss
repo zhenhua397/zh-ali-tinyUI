@@ -1,0 +1,148 @@
+.am-tabs-tab-bar-wrap {
+  width: 100%;
+}
+
+.am-tabs-bar {
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  height: 66px;
+  display: flex;
+}
+
+/* 去掉左右遮罩
+.am-tabs-scroll-left {
+  width: 36px;
+  height: 64px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  z-index: 99;
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0)) left no-repeat;
+  background-size: 100%;
+}
+
+.am-tabs-scroll-right {
+  width: 36px;
+  height: 64px;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  z-index: 99;
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0)) left no-repeat;
+  background-size: 100%;
+}*/
+
+.am-tabs-plus-wrap {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 66px;
+}
+
+.am-tabs-plus-wrap.show {
+  display: block;
+}
+
+.am-tabs-plus {
+  position: absolute;
+  z-index: 100;
+  top: 14px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/DObPgppwxyNHeejHANtu.png');
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.am-tabs-bar-content-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.am-tabs-bar-content {
+  width: 100%;
+  height: 66px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+}
+
+.am-tabs-bar-tab {
+  height: 66px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-family: PingFang SC;
+}
+
+.am-tabs-bar-title {
+  height: 42px;
+  line-height: 42px;
+  box-sizing: border-box;
+  position: relative;
+  /* 不能自定义长度
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;*/
+}
+
+.am-tabs-bar-title-bottomline {
+  display: block;
+  height: 4px;
+}
+
+.am-tabs-bar-badge.dot {
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  transform: translateX(8px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FF3B30;
+}
+
+.am-tabs-bar-badge.text {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  transform: translateX(100%);
+  height: 16px;
+  width: 16px;
+  line-height: 16px;
+  text-align: center;
+  min-width: 16px;
+  border-radius: 50%;
+  background: #FF3B30;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+
+.am-tabs-content-wrap {
+  margin-top: 1px;
+  display: flex;
+  background: #fff;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.am-tabs-content-wrap.fix {
+  height: auto !important;
+}
+
+.am-tabs-slides {
+  display: flex;
+  transition-duration: 500ms;
+}

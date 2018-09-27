@@ -1,0 +1,23 @@
+{
+  "name": "zh-ali-tinyui",
+  "version": "0.0.1",
+  "description": "支付宝小程序UI组件库",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ant-mini-program/mini-antui.git"
+  },
+  "files": [
+    "es"
+  ],
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-ali": "^3.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "pre-commit-eslint": "^0.0.6",
+    "rc-tools": "6.x"
+  },
+  "scripts": {
+    "build": "rc-tools run compile && node scripts/cp.js && node scripts/rm.js",
+    "pub": "git push origin && npm run build && npm publish"
+  }
+}
