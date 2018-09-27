@@ -1,6 +1,6 @@
 {
   "name": "zh-ali-tinyui",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "支付宝小程序UI组件库",
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   },
   "scripts": {
     "build": "rc-tools run compile && node scripts/cp.js && node scripts/rm.js",
-    "pub": "git push origin && npm run build && npm publish"
+    "pub": "npm run build && npm publish"
   }
 }
